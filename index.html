@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Engine</title>
+        <meta charset='utf-8' />
+        <style>
+            body{
+                background-color:black;
+            }
+            #rootElem1{
+                box-shadow: 0px 0px 15px 0px;
+                border-radius: 2px;
+                border-style: dotted;
+            }
+        </style>
+    </head>
+    <body>
+        <center> 
+            <div id='rootElem1'> </div> 
+        </center>
+        
+        <!-- Core modules: render, audio, input, scripts, object -->
+        <script render-module  src="engine/module/HTML5CanvasRender.js"></script>
+        <script script-manager src="engine/module/scriptsManager.js"></script>
+        <script script-manager src="engine/module/gameObjectManager.js"></script>     
+        
+        <!-- Engine -->
+		<script src="engine/engine.js"></script>
+        
+		<script>
+            engine.Init("rootElem1", 800, 600);
+		</script>
+    </body>
+</html>
